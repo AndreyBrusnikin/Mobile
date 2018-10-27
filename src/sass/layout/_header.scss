@@ -1,19 +1,47 @@
 .header-holder {
 	position: relative;
+	background-color: $pink-gray;
 
 	.container {
 		padding: 0;
 	}
+
+	@media (min-width: 1200px) {
+		padding-top: 30px;
+	}
 }
+
+.intro{
+	padding: 0 10px;
+
+	@media (min-width: 1025px) {
+		padding: 0 ;
+	}
+}
+
 
 .header {
 	background: black;
 	padding: 15px;
+	margin: 0 0 10px 0;
+	
+
+	@media (min-width: 768px) and (orientation: landscape) {
+		padding: 0;
+		margin: 0 0 100px 0;
+	}
 }
 
 nav {
 	display: inline-block;
 	vertical-align: top;
+
+	
+
+	@media (min-width: 768px) {
+		display: block;
+		overflow: hidden;
+	}
 
 	&:hover {
 
@@ -76,9 +104,16 @@ nav {
 			transform: rotate(-45deg) translate(8px, -8px);
 		}
 
-		// + .nav {
-		// 	transform: translateX(0);
-		// }
+		@media (min-width: 768px) {
+			
+			+ .nav {
+				max-height: 50vh;
+			}
+		}
+	}
+
+	@media (min-width: 768px) and (orientation: landscape) {
+		display: none;
 	}
 }
 
@@ -90,4 +125,280 @@ nav {
 	background: black;
 	transform: translateX(-100%);
 	transition: .3s transform;
+	list-style: none;
+	padding: 0 15px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 18px;
+
+	@media (min-width: 768px) {
+		position: static;
+		transform: none;
+		max-height: 0;
+		transition: .3s max-height;
+	}
+
+	@media (min-width: 768px) and (orientation: landscape) {
+		display: flex;
+		justify-content: center;
+		max-height: none;
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+		padding: 15px;
+		color: white;
+		border-bottom: 2px solid white;
+		transition: .3s background-color;
+
+		@media (min-width: 768px) and (orientation: landscape) {
+			border-bottom: 0;
+		}
+
+		&.active,
+		&:hover {
+			background: red;
+		}
+	}
+
+	li {
+		&:last-child {
+			a {
+				border-bottom: none;
+			}
+		}
+	}
+}
+
+	
+
+h1{
+	font-size: 60px;
+	color: black;
+	text-transform: uppercase;
+	font-weight: 800;
+	line-height: 1.1;
+	margin: 0 0 20px 0;
+
+	@media (max-width: 320px) {
+	font-size: 30px;
+	color: black;
+	text-transform: uppercase;
+	font-weight: 800;
+	line-height: 1.1;
+}
+}
+
+
+.row {
+	display: flex;
+    flex-direction: column;
+    padding: 0 0 110px 0;
+	
+    
+
+    
+  
+
+  @media (min-width: 1024px) {
+	display: flex;
+	flex-direction: row;
+	
+	
+  	
+	}
+
+	@media (max-width: 568px) {
+		padding: 0 0 10px 0;
+	}
+
+
+
+}
+
+
+
+.half-col {
+  width: 100%;
+}
+
+.vertical-offset {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.leftblock{
+	p{
+		width: 460px;
+
+		@media (max-width: 320px) {
+			width: 260px;
+		}
+	}
+}
+
+.rightblock{
+	
+	
+	float: left;
+
+
+	@media (min-width: 1024px) {
+		float: right;
+	min-width: 200px;
+	}
+
+	@media (max-width:700px) {
+		float: left;
+		display: none;
+	}
+	img{
+		    box-shadow: 0 0 60px rgba(0,0,0,0.3);
+	}
+
+}
+
+.button_red{
+  background-color: #ff2d2d;	
+  margin: 25px auto;
+  width: 200px;
+  height: 50px;
+  overflow: hidden;
+  border: none;
+    border-radius: 8px;
+  }
+
+  a{
+  	text-decoration: none;
+  	color: #fff;
+  	font-size: 18px;
+
+}
+
+.row2 {
+	display: flex;
+    flex-direction: column;
+	
+   
+  @media (min-width: 1024px) {
+	display: flex;
+	flex-direction: row;	
+	}
+}
+
+h2{
+
+	font-size: 42px;
+	color: #585858;
+	text-transform: uppercase;
+	line-height: 1.1;
+	margin: 0 0 30px 0;
+
+	@media (max-width: 568px) {
+		font-size: 24px;
+	color: #585858;
+	text-transform: uppercase;
+	line-height: 1.1;
+	}
+
+}
+
+.button_red2{
+    background-color: transparent;
+    margin: 25px auto;
+    width: 200px;
+    height: 50px;
+    border: -1px;
+
+    border-color: #ff2d2d;
+    border-radius: 8px;
+
+    a{
+  	text-decoration: none;
+  	color: #ff2d2d;
+  	font-size: 18px;
+  }
+
+}
+
+
+.column{
+	display: flex;
+	padding: 0;
+
+	h3{
+		font-size: 24px;
+		color: #737373;
+		@media (max-width: 320px) {
+
+			font-size: 18px;
+		}
+
+
+
+	}
+
+	p{
+		font-size: 13px;
+		color: #737373;
+
+		@media (max-width: 320px) {
+
+			font-size: 12px;
+		}
+	}
+
+
+	@media (max-width: 600px) {
+	flex-direction: column;
+}
+}
+
+.second {
+	padding-top: 115px;
+
+	@media (max-width: 568px) {
+		padding-top: 10px;
+	}
+
+}
+
+.icon-settings , .icon-pencil , .icon-diamond , .icon-truck {
+	color: #ff3c4a;
+
+}
+
+.rightblock2 {
+
+		line-height: 2;
+
+		
+		
+}
+.block{
+	padding:0 20px;
+	width: 350px;
+
+	@media (max-width: 768px) {
+	    padding: 0;
+    	
+    }
+
+	@media (max-width: 320px) {
+	    padding: 0;
+    	width: 280px;
+    }
+}
+
+.leftblock2 {
+
+		p {
+			@media (max-width: 320px) {
+				font-size:12px;
+
+			}
+}
+
+
 }
